@@ -86,6 +86,15 @@ jobs:
         env:
           TAURI_SKIP_DEVSERVER_CHECK: true
           
+      - name: Check for macOS bundle output
+        run: |
+          echo "--- Listing browser-core/target/release/bundle/ ---"
+          ls -alh browser-core/target/release/bundle/
+          echo "--- Listing browser-core/target/release/bundle/dmg/ ---"
+          ls -alh browser-core/target/release/bundle/dmg/ || true
+          echo "--- Listing browser-core/target/release/bundle/macos/ ---"
+          ls -alh browser-core/target/release/bundle/macos/ || true
+          
       - name: Upload macOS Installer
         uses: actions/upload-artifact@v4
         with:
