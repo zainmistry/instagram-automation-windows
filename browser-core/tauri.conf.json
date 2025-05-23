@@ -1,0 +1,52 @@
+{
+  "productName": "Instagram Automation Tool",
+  "version": "1.0.0",
+  "identifier": "com.instagram.automation",
+  "build": {
+    "beforeDevCommand": "cd ../dashboard && npm run dev",
+    "beforeBuildCommand": "cd ../dashboard && npm run build",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dashboard/dist"
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      }
+    },
+    "shortDescription": "Advanced Instagram automation tool with anti-detection",
+    "longDescription": "A sophisticated Instagram automation tool with multi-account support, proxy management, and advanced anti-detection features.",
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "../config/proxies.example.json",
+      "../config/accounts.example.json"
+    ],
+    "copyright": "© 2024",
+    "category": "Utility",
+    "fileAssociations": []
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Instagram Automation Tool",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null,
+      "dangerousDisableAssetCspModification": true
+    }
+  }
+} 

@@ -1,0 +1,72 @@
+# Rust
+browser-core/target/
+**/*.rs.bk
+Cargo.lock
+
+# Node
+node_modules/
+dashboard/dist/
+dashboard/dist-ssr/
+*.local
+.env
+.env.local
+.env.*.local
+
+# Tauri
+browser-core/icons/icon_*.png
+browser-core/WixTools/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Application data
+*.db
+*.db-journal
+instagram_automation.db
+
+# Sensitive configuration
+config/proxies.json
+config/accounts.json
+
+# Build outputs
+*.msi
+*.exe
+*.dmg
+*.app
+*.deb
+*.AppImage
+
+# Keep example files
+!config/proxies.example.json
+!config/accounts.example.json 

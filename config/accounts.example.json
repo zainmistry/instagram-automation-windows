@@ -1,0 +1,22 @@
+{
+  "accounts": [
+    {
+      "username": "your_instagram_username1",
+      "password": "your_password1",
+      "email": "email1@example.com",
+      "proxy_index": 0
+    },
+    {
+      "username": "your_instagram_username2",
+      "password": "your_password2", 
+      "email": "email2@example.com",
+      "proxy_index": 1
+    },
+    {
+      "username": "your_instagram_username3",
+      "password": "your_password3",
+      "email": "email3@example.com",
+      "proxy_index": 2
+    }
+  ]
+} 
