@@ -32,12 +32,18 @@ jobs:
         run: |
           cd dashboard
           npm install
+          
+      - name: Build Dashboard
+        run: |
+          cd dashboard
           npm run build
           
       - name: Build Tauri App
         run: |
           cd browser-core
-          npx @tauri-apps/cli build
+          npx @tauri-apps/cli build --bundles msi,nsis
+        env:
+          TAURI_SKIP_DEVSERVER_CHECK: true
           
       - name: Upload Windows Installers
         uses: actions/upload-artifact@v4
@@ -67,12 +73,18 @@ jobs:
         run: |
           cd dashboard
           npm install
+          
+      - name: Build Dashboard
+        run: |
+          cd dashboard
           npm run build
           
       - name: Build Tauri App
         run: |
           cd browser-core
           npx @tauri-apps/cli build
+        env:
+          TAURI_SKIP_DEVSERVER_CHECK: true
           
       - name: Upload macOS Installer
         uses: actions/upload-artifact@v4
